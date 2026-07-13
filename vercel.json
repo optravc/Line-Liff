@@ -1,27 +1,26 @@
 {
-    "services": {
-        "frontend": {
-            "root": "frontend",
-            "framework": "nextjs"
-        },
-        "backend": {
-            "root": "backend"
-        }
+  "functions": {
+    "backend/cmd/api/main.go": {
+      "runtime": "vercel-go"
+    }
+  },
+  "services": {
+    "frontend": {
+      "root": "frontend",
+      "framework": "nextjs"
     },
-    "rewrites": [
-        {
-            "source": "/api/backend(/.*)?",
-            "destination": {
-                "type": "service",
-                "service": "backend"
-            }
-        },
-        {
-            "source": "/(.*)",
-            "destination": {
-                "type": "service",
-                "service": "frontend"
-            }
-        }
-    ]
+    "backend": {
+      "root": "backend"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/backend/(.*)",
+      "destination": "/api/backend/cmd/api/main.go"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
+    }
+  ]
 }
