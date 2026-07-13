@@ -5,13 +5,14 @@
       "framework": "nextjs"
     },
     "backend": {
-      "root": "backend"
+      "root": "backend",
+      "entrypoint": "cmd/api/main.go"
     }
   },
   "rewrites": [
     {
-      "source": "/api/backend/(.*)",
-      "destination": "/api/backend/cmd/api/main.go"
+      "source": "/(.*)",
+      "destination": "/backend/cmd/api/main.go"
     },
     {
       "source": "/(.*)",
