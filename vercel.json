@@ -1,16 +1,16 @@
 {
-  "functions": {
-    "backend/cmd/api/main.go": {
-      "runtime": "vercel-go"
-    }
-  },
   "services": {
     "frontend": {
       "root": "frontend",
       "framework": "nextjs"
     },
     "backend": {
-      "root": "backend"
+      "root": "backend",
+      "functions": {
+        "cmd/api/main.go": {
+          "runtime": "vercel-go"
+        }
+      }
     }
   },
   "rewrites": [
