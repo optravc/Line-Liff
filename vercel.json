@@ -5,12 +5,7 @@
       "framework": "nextjs"
     },
     "backend": {
-      "root": "backend",
-      "functions": {
-        "cmd/api/main.go": {
-          "runtime": "vercel-go"
-        }
-      }
+      "root": "backend"
     }
   },
   "rewrites": [
