@@ -1,7 +1,7 @@
 'use client';
 import React, { useCallback, useEffect, useState } from 'react';
 // *อย่าลืม Import ฟังก์ชัน deleteBooking (หรือ cancelBooking) จาก service ของคุณ
-import { getBookingStatus, deleteBooking, type BookingStatusItem } from '../../../services/bookingService';
+import { getBookingStatus, deleteBooking, type BookingStatusItem } from '../../services/bookingService';
 import type { ProfileData } from './types';
 
 interface BookingStatusProps {
