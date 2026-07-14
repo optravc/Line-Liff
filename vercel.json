@@ -1,14 +1,14 @@
 {
-  "services": {
-    "frontend": {
-      "root": "frontend",
-      "framework": "nextjs"
+  "builds": [
+    {
+      "src": "backend/cmd/api/main.go",
+      "use": "@vercel/go"
     },
-    "backend": {
-      "root": "backend",
-      "entrypoint": "cmd/api/main.go"
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/next"
     }
-  },
+  ],
   "rewrites": [
     {
       "source": "/api/(.*)",
