@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import MainLayout from './layouts/MainLayout';
+import MainLayout from '../layouts/MainLayout';
 
 export const metadata: Metadata = {
   title: 'To Dentists',

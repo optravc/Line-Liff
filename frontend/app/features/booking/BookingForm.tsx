@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, type ChangeEvent } from 'react';
-import { createBooking, type BookingRequest } from '../../services/bookingService';
+import { createBooking, type BookingRequest } from '../../../services/bookingService';
 import type { BookingData, ProfileData } from './types';
 import { serviceOptions } from './serviceOptions';
 
